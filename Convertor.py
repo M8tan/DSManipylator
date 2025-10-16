@@ -8,6 +8,17 @@ def Convert_List_To_Dictionary(Input_List):
 def Convert_List_To_Tuple(Input_List):
     Output_Tuple = tuple(Input_List)
     return Output_Tuple
+def Convert_List_To_Set(Input_List):
+    Output_Set = set()
+    Remainders = list()
+    for i in range(len(Input_List)):
+        if Input_List[i] not in Output_Set:
+            Output_Set.add(Input_List[i])
+        else:
+            Remainders.append(Input_List[i])
+    if len(Remainders) > 0:
+        return Output_Set, Remainders
+    return Output_Set
 def Reverse_List(Input_List):
     return Input_List[::-1]
 def Find_List_Average(Input_List, Accuracy):
@@ -29,10 +40,7 @@ if __name__ == "__main__":
 
     Test_List = [1, 2, 4, 8, "a", 3, 7, 2]
     bs = ["a", "b", "c"]
-    try:
-        Avg = Find_List_Average(bs, 2)
-        print(Avg)
-    except Exception as e:
-        print(e)
-    
+    Converted = Convert_List_To_Set(Test_List)
+    print((Converted[0]))
+    print("H")
     
