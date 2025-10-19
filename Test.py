@@ -1,4 +1,4 @@
-from Convertor import *
+import Convertor as Cnv
 List = [1,3,4,5,9]
-print(Convert_List_To_Tuple(List))
+print(Cnv.Convert_List_To_Tuple(List))
 
