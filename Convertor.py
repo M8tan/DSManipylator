@@ -279,11 +279,21 @@ def Convert_First_Character_To_Uppercase(Input_String):
         else:
             Output_String += Current_Char
     return Output_String
+def Reverse_String(Input_String):
+    #return Input_String[::-1]
+    Output = ""
+    i = len(Input_String)
+    while i > 0:
+        Current_Char = Input_String[i - 1]
+        Output += Current_Char
+        i -= 1
+    return Output
 
 
 if __name__ == "__main__":
 
     Test_List = [1, 2, 4, 8, "a", 3, 7, 2]
-    Test_String = "Hello, world!! i loVe u 3000"
+    Test_String = "Hello, world!!\ni loVe u 3000"
     print(Convert_First_Character_To_Lowercase(Test_String))
+    print(Reverse_String("Hello, world!"))
     
