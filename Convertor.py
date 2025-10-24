@@ -32,7 +32,6 @@ def Find_List_Average(Input_List, Accuracy):
         return "No numbers in given list"
         #raise Exception("No numbers in given list")
     return round(Total / Yes_Int, Accuracy)
-    
 def Convert_To_Lowercase(Input_String):
     Output_String = ""
     for i in range(len(Input_String)):
@@ -288,7 +287,20 @@ def Reverse_String(Input_String):
         Output += Current_Char
         i -= 1
     return Output
-
+def Remove_Duplicates_From_List(Input_List):
+    Output = []
+    for item in Input_List:
+        if item not in Output:
+            Output.append(item)
+    return Output
+def Flatten_List(Input_List):
+    Output = []
+    for item in Input_List:
+        if isinstance(item, (list)):
+            Output.extend(Flatten_List(item))
+        else:
+            Output.append(item)
+    return Output
 
 if __name__ == "__main__":
 
@@ -296,4 +308,5 @@ if __name__ == "__main__":
     Test_String = "Hello, world!!\ni loVe u 3000"
     print(Convert_First_Character_To_Lowercase(Test_String))
     print(Reverse_String("Hello, world!"))
+    
     
