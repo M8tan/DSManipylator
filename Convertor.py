@@ -301,12 +301,16 @@ def Flatten_List(Input_List):
         else:
             Output.append(item)
     return Output
+def Find_Max_Value_In_Dictionary(Input_Dict):
+    return Input_Dict[max(Input_Dict.keys())]
+def Find_Max_Value_Key_In_Dictionary(Input_Dict):
+    return max(Input_Dict.keys())
 
 if __name__ == "__main__":
 
-    Test_List = [1, 2, 4, 8, "a", 3, 7, 2]
+    Test_List = [1, 2, 4, [2, 5], 8, "a", 3, 7, 2]
     Test_String = "Hello, world!!\ni loVe u 3000"
     print(Convert_First_Character_To_Lowercase(Test_String))
-    print(Reverse_String("Hello, world!"))
+    print(Remove_Duplicates_From_List(Flatten_List(Test_List)))
     
     
